@@ -7,8 +7,15 @@ int main() {
     int n;
     cin >> str >> n;
     int len = str.length();
-    for(int i = len-1; i >= len-n; i--){
-        cout << str[i];
+    if(len < n){
+        for(int i = len-1; i >= 0; i--){
+            cout << str[i];
+        }
+    }else{
+        for(int i = len-1; i >= len-n; i--){
+            cout << str[i];
+        }
     }
+    
     return 0;
 }
