@@ -5,18 +5,12 @@ using namespace std;
 int main() {
     string str1, str2;
     cin >> str1 >> str2;
-    int cnt = 0;
-	for(int i = 0; i< str1.length(); i++){
-		if(str1.find(str2) == -1){
-			break;
-		}else if(str1.find(str2,i)<=i){
-            cnt++;
-		}
+	int idx = -1;
+
+	if((str1.find(str2)) != string::npos) {
+		idx = str1.find(str2);
 	}
-	if(cnt == 0){
-		cout << -1;
-	}else{
-		cout << cnt;
-	}
+
+	cout << idx;
     return 0;
 }
