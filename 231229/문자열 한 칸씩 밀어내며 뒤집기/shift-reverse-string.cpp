@@ -17,7 +17,7 @@ int main() {
             s = s.substr(len-1, len) + s.substr(0, len-1);
             cout << s << endl;
         }else if(q == 3){
-            reverse(s.begin(), is.end());
+            reverse(s.begin(), s.end());
             cout << s << endl;
         }
     }
