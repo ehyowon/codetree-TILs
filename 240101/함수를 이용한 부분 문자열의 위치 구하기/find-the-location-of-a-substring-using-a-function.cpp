@@ -11,7 +11,7 @@ bool IsSubStr(int idx){
         return false;
     }
     for(int j = 0; j < m; j++){
-        if(text[idx + j] != str2[j]){
+        if(str1[idx + j] != str2[j]){
             return false;
         }
     }
