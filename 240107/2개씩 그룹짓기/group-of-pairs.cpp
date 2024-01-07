@@ -13,9 +13,9 @@ int main() {
     sort(arr, arr + 2*n);
     int sum[1000];
     for(int i = 0; i < n; i++){
-        sum[i] = arr[i] + arr[2*n - i];
+        sum[i] = arr[i] + arr[2*n - 1 - i];
     }
-    sort(sum, sum + n);
-    cout << sum[n-1];
+    sort(sum, sum + n, greater<int>());
+    cout << sum[0];
     return 0;
 }
