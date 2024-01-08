@@ -15,6 +15,7 @@ int main() {
         for(int i = 0; i < a; i++){
             new_arr[i] = arr[i];
         }
+        sort(new_arr, new_arr + a);
         cout << new_arr[a/2] << " ";
         a += 2;
     }
