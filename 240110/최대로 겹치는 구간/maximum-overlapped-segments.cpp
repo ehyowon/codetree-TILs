@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
-int n;
-int x1[101], x2[101];
-int check[201];
 
 int main() {
+    int n;
+    int x1[101] = {}, x2[101] = {};
+    int check[201] = {};
     cin >> n;
     for(int i = 0; i < n; i++){
         cin >> x1[i] >> x2[i];
