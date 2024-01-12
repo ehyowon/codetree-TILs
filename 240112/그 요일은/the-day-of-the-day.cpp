@@ -7,21 +7,21 @@ int main() {
     string A;
     cin >> m1 >> d1 >> m2 >> d2 >> A;
     int month = m1, day = d1, i = 0;
-    int week[7] = {};
+    int week[7] = {1,0,0,0,0,0,0};
     int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     while(true){
-        if(month == m2 && day == d2){
-            break;
-        }
         day++;
-        week[i]++;
         i++;
+        if(i >= 7){
+            i = 0;
+        }
+        week[i]++;
         if(day > num_of_days[month]){
             month++;
             day = 1;
         }
-        if(i >= 7){
-            i = 0;
+        if(month == m2 && day == d2){
+            break;
         }
     }
     if(A == "Sun"){
