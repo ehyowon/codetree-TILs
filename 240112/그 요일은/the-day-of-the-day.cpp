@@ -38,6 +38,8 @@ int main() {
         cout << week[4];
     }else if(A == "Sat"){
         cout << week[5];
+    }else{
+        cout << 0;
     }
     return 0;
 }
