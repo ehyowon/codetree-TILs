@@ -20,7 +20,7 @@ int main() {
             month++;
             day = 1;
         }
-        if(month == m2 && day == d2){
+        if(month >= m2 && day >= d2){
             break;
         }
     }
