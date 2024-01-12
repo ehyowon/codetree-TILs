@@ -9,7 +9,7 @@ int main() {
     int month = m1, day = d1;
     int days = 1;
     if(A == "Sun"){
-        days += 0;
+        days += 6;
     }else if(A == "Mon"){
         days += 7;
     }else if(A == "Tue"){
@@ -25,13 +25,12 @@ int main() {
     }
     int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     while(true) {
-        if(month == m2 && day == d2)
+        if(month == m2 && day == d2){
             break;
-    
+        }
         days++;
         day++;
-    
-        if(day > num_of_days[month]) {
+        if(day > num_of_days[month]){
             month++;
             day = 1;
         }
