@@ -22,6 +22,10 @@ int main() {
         int x1, x2, y1, y2;
         rectangle[i] = Rect(x1, x2, y1, y2);
         cin >> rectangle[i].x1 >> rectangle[i].y1 >> rectangle[i].x2 >> rectangle[i].y2;
+        rectangle[i].x1 += 100;
+        rectangle[i].y1 += 100;
+        rectangle[i].x2 += 100;
+        rectangle[i].y2 += 100;
     }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < 200; j++){
