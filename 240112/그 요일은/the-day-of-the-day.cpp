@@ -10,6 +10,9 @@ int main() {
     int week[7] = {1,0,0,0,0,0,0};
     int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     while(true){
+        if(month == m2 && day == d2){
+            break;
+        }
         day++;
         i++;
         if(i >= 7){
@@ -19,9 +22,6 @@ int main() {
         if(day > num_of_days[month]){
             month++;
             day = 1;
-        }
-        if(month >= m2 && day >= d2){
-            break;
         }
     }
     if(A == "Sun"){
