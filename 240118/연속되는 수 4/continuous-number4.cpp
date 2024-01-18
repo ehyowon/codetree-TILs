@@ -9,7 +9,9 @@ int main() {
     }
     int cnt = 1, maxcnt = 0;
     for(int i = 0; i < n; i++){
-        if(a[i] > a[i-1]){
+        if(i == 0){
+            cnt = 1;
+        }else if(a[i] > a[i-1]){
             cnt++;
         }else{
             cnt = 1;
