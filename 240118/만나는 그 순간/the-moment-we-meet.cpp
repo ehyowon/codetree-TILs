@@ -46,9 +46,13 @@ int main() {
 
     bool Meet = false; //만나는지
     for(int i = 0; i < 1000000; i++){
-        if(i != 0 && A[i] == B[i]){
+        if(A[i] == B[i]){
             Meet = true;
-            cout << i+1;
+            if(i < m && i < n){
+                cout << i + 1;
+            }else{
+                Meet = false;
+            }
             break;
         }
     }
