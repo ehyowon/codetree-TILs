@@ -48,7 +48,7 @@ int main() {
     for(int i = 0; i < 1000000; i++){
         if(A[i] == B[i]){
             Meet = true;
-            if(i < m && i < n){
+            if(i < idx_A && i < idx_B){
                 cout << i + 1;
             }else{
                 Meet = false;
