@@ -28,6 +28,7 @@ int main() {
             }
             A[j] = dis_A;
         }
+        idx_A += At[i];
     }
 
     //B배열에 값 채우기
@@ -40,13 +41,14 @@ int main() {
             }
             B[j] = dis_B;
         }
+        idx_B += Bt[i];
     }
 
     bool Meet = false; //만나는지
     for(int i = 0; i < 1000000; i++){
         if(i != 0 && A[i] == B[i]){
             Meet = true;
-            cout << i;
+            cout << i+1;
             break;
         }
     }
