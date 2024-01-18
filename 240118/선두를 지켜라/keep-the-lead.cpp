@@ -41,7 +41,7 @@ int main() {
         }
     }
     for(int i = 0; i < 1000000; i++){
-        if(Faster[i] != Faster[i-1]){
+        if(i == 0 || Faster[i] != Faster[i-1]){
             cnt++;
         }
     }
