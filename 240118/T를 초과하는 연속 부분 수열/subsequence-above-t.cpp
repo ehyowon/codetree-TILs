@@ -28,7 +28,13 @@ int main() {
             maxcnt = cnt;
         }
     }
-    if(maxcnt == 1){
+    bool Exist = false;
+    for(int i = 0; i < n; i++){
+        if(a[i] > t){
+            Exist = true;
+        }
+    }
+    if(Exist == false){
         cout << 0;
     }else{
         cout << maxcnt;
