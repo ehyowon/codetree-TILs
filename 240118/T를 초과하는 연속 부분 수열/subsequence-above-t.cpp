@@ -5,7 +5,7 @@ int main() {
     int n, t, a[1000];
     cin >> n >> t;
     bool isBigger[1000];
-    int cnt = 0, maxcnt = 0;
+    int cnt = 1, maxcnt = 0;
     for(int i = 0; i < n; i++){
         cin >> a[i];
     }
@@ -18,7 +18,7 @@ int main() {
 
         if(i == 0){
             cnt = 1;
-        }else if(isBigger[i] == isBigger[i-1]){
+        }else if(isBigger[i] == true && isBigger[i-1] == true){
             cnt++;
         }else{
             cnt = 1;
