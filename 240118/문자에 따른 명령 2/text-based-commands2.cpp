@@ -22,6 +22,9 @@ int main() {
                 x--;
             }
         }
+        if(dir <= 0){
+            dir += 4;
+        }
     }
     cout << x << " " << y;
     return 0;
