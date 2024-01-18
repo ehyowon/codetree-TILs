@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int n, a[1000];
-    bool Plus[1000] = {};
+    bool Plus[1000];
     cin >> n;
     for(int i = 0; i < n; i++){
         cin >> a[i];
@@ -16,7 +16,9 @@ int main() {
             Plus[i] = true;
         }
 
-        if(Plus[i] == Plus[i-1]){
+        if(i == 0){
+            cnt = 1;
+        }else if(Plus[i] == Plus[i-1]){
             cnt++;
         }else{
             cnt = 1;
