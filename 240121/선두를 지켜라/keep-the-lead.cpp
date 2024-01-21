@@ -48,11 +48,16 @@ int main() {
     int Minus[1000000] = {};
     for(int i = 0; i < idx; i++){
         Minus[i] = A[i] - B[i];
+        if(Minus[i] >= 0){
+            Minus[i] = 1;
+        }else{
+            Minus[i] = -1;
+        }
         //cout << Minus[i] << endl;
     }
     int cnt = 0;
     for(int i = 0; i < 1000000; i++){
-        if(Minus[i] * Minus[i-1] < 0 || Minus[i] == 0 && Minus[i-1] < 0 || Minus[i] < 0 && Minus[i-1] == 0){
+        if(Minus[i] * Minus[i-1] < 0){
             cnt++;
         }
     }
