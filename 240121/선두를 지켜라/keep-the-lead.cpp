@@ -52,7 +52,9 @@ int main() {
     }
     int cnt = 0;
     for(int i = 0; i < 1000000; i++){
-        if(Minus[i] * Minus[i-1] < 0 || Minus[i] == 0 && Minus[i-1] * Minus[i+1] < 0){
+        if(i == 0 && Minus[i+1] < 0){
+            cnt++;
+        }else if(Minus[i] * Minus[i-1] < 0 || Minus[i] == 0 && Minus[i-1] * Minus[i+1] < 0){
             cnt++;
         }
     }
