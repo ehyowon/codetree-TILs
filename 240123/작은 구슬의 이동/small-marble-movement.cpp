@@ -27,19 +27,18 @@ int main() {
     int x = nx + dx[dir], y = ny + dy[dir];
 
     for(int i = 0; i < t; i++){
+        x += dx[dir], y += dy[dir];
         if(x <= 0 || x >= n || y <= 0 || y >= n){
             dir = 3 - dir;
             if(x <= 0){
                 x++;
-            }else if(y <= 0){
-                y++;
             }else if(x >= n){
                 x--;
+            }else if(y <= 0){
+                y++;
             }else if(y >= n){
                 y--;
             }
-        }else{
-            x += dx[dir], y += dy[dir];
         }
         //cout << x << " " << y << endl;
     }
