@@ -24,19 +24,19 @@ int main() {
 
     int nx = r, ny = c;
     int dir = GetDir(d);
-    int x = nx + dx[dir], y = ny + dy[dir];
+    int x = nx, y = ny;
 
     for(int i = 0; i < t; i++){
         x += dx[dir], y += dy[dir];
-        if(x <= 0 || x >= n || y <= 0 || y >= n){
+        if(x < 1 || x > n || y < 1 || y > n){
             dir = 3 - dir;
-            if(x <= 0){
+            if(x < 1){
                 x++;
-            }else if(x >= n){
+            }else if(x > n){
                 x--;
-            }else if(y <= 0){
+            }else if(y < 1){
                 y++;
-            }else if(y >= n){
+            }else if(y > n){
                 y--;
             }
         }
