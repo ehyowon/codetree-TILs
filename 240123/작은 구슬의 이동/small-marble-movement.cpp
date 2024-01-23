@@ -29,6 +29,15 @@ int main() {
     for(int i = 0; i < t; i++){
         if(x <= 0 || x >= n || y <= 0 || y >= n){
             dir = 3 - dir;
+            if(x <= 0){
+                x++;
+            }else if(y <= 0){
+                y++;
+            }else if(x >= n){
+                x--;
+            }else if(y >= n){
+                y--;
+            }
         }else{
             x += dx[dir], y += dy[dir];
         }
