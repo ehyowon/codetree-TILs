@@ -32,7 +32,7 @@ int main() {
         }
         */
 
-        if(cnt >= 3){
+        if(cnt == 3){
             cout << 1 << endl;
         }else{
             cout << 0 << endl;
