@@ -49,6 +49,10 @@ int main() {
         x += n;
     }else if(y < 0){
         y += n;
+    }else if(x > n){
+        x -= n;
+    }else if(y > n){
+        y -= n;
     }
 
     int cnt = 0;
