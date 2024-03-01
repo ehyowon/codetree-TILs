@@ -12,11 +12,9 @@ def search(i, j):
                 cnt += 1
     return cnt
 
-i, j = 0, 0
-while(i+3 <= n and j+3 <= n and i >= 0 and j >= 0):
-    count.append(search(i,j))
-    i += 1
-    j += 1
+for i in range(n-2):
+    for j in range(n-2):
+        count.append(search(i,j))
 
 print(max(count))
 
